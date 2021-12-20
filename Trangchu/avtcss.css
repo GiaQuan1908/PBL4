@@ -1,0 +1,37 @@
+.avatar-content {
+	display: none;
+	width: 200px;
+	height: 350px;
+	position: fixed;
+	background-color: white;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  	padding-top: 20px;
+  	text-align: left;
+  	border-radius: 2%;
+}
+.w3-right:hover .avatar-content {
+	display: block;
+}
+.avatar-content a {
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+	color: black;
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 15px;
+}
+
+.avatar-content a:hover {
+	text-decoration: none;
+	background-color: #e3b04b;
+	color: white;
+}
+
+.avatar-content h3 {
+	text-align: center;
+	padding: 5px 20px;
+	display: block;
+	color: black;
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 1rem;
+}

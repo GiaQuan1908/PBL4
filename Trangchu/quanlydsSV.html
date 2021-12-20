@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>TRANG ADMIN</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css"
+            integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="search.css?t=1" />
+        <link rel="stylesheet" href="avtcss.css?t=1" />
+        <link rel="stylesheet" href="style.css?t=1" />
+        <link rel="stylesheet" href="footer.css?t=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script type="text/javascript" async src="main.js"></script>
+    </head>
+    <body onscroll="fix_sidemenu()">
+        <div class="w3-bar w3-card-2 notranslate" style="position: relative; z-index: 4; font-size: 18px; background-color: white; color: #282a35; padding-left: 12px; padding-right: 16px; font-family: 'Source Sans Pro', sans-serif;">
+            <a href="index.html" title="Home">
+                <img src="Logo.gif" style="width: 300px; height: auto;" />
+            </a>
+
+            <style>
+                @media screen and (max-width: 1080px) {
+                    .ws-hide-1080 {
+                        display: none !important;
+                    }
+                }
+            </style>
+            <div id="avatar" class="w3-right">
+                <img src="Avata.jpg" width="50" height="50" style="border-radius: 50%;">
+                <div class= avatar-content style="">
+                    <h3 href="" style="text-align: center;">
+                        <img src="Avata.jpg" width="100" height="100" style="border-radius: 50%;">
+                    </h3>
+                    <h3 href="">Trần Thị Thảo</h3>
+                    <h3 href="">102190240</h3>
+                    <a href="quanlybaiviet.html">Quản lý bài viết</a>
+                    <a href="profile.html">Thông tin cá nhân</a>
+                    <a href="">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-card-2 topnav notranslate" id="topnav" style="position: relative; top: 0px;">
+            <div style="overflow: auto;">
+                <div class="w3-bar w3-left" style="width: 100%; overflow: hidden; height: 44px;">
+                    <a class="w3-bar-item w3-button active" href="javascript:void(0)" onclick="" title="HTML Tutorial" style="padding-left: 18px !important; padding-right: 18px !important;">ĐẠI CƯƠNG</a>
+                    <a class="w3-bar-item w3-button" href="/css/default.asp" title="CK Tutorial">CƠ KHÍ</a>
+                    <a class="w3-bar-item w3-button" href="/js/default.asp" title="CNTT Tutorial">CÔNG NGHỆ THÔNG TIN</a>
+                    <a class="w3-bar-item w3-button" href="/sql/default.asp" title="QLDA Tutorial">QUẢN LÝ DỰ ÁN</a>
+                    <a class="w3-bar-item w3-button" href="/python/default.asp" title="D Tutorial">ĐIỆN</a>
+                    <a class="w3-bar-item w3-button" href="/php/default.asp" title="CNSH Tutorial">CÔNG NGHỆ SINH HỌC</a>
+                    <a class="w3-bar-item w3-button" href="/bootstrap/bootstrap_ver.asp" title="MT Tutorial">MÔI TRƯỜNG</a>
+                	<div class="search-wrapper">
+					    <div class="input-holder">
+					        <input type="text" class="search-input" placeholder="Type to search" />
+					        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+					    </div>
+					    <span class="close" onclick="searchToggle(this, event);"></span>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-sidebar w3-collapse" id="sidenav" style="top: 118px;display: block;">
+            <div id="leftmenuinner" style="padding-top: 118px;">
+                <div id="leftmenuinnerinner" style="background-color: #e7e9eb;">
+                    <a href="quanlydsSV.html" class="active">Danh sách tài khoản</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left: 220px; padding-top: 44px;">
+            
+            <div class="col-md-12">
+                <div class="card">
+                    <div>
+                        <div class="card-header" style="background-color: #e3b04b">Danh Sách Sinh Viên 
+                            
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-inverse table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>MSSV</th>
+                                        <th>Tên Sinh Viên</th>
+                                        <th>Tên Lớp</th>
+                                        <th>Phòng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>102190240</td>
+                                        <td>Trần Thị Thảo</td>
+                                        <td>15C4B</td>
+                                        <td>C502</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Reset Password</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>102190234</td>
+                                        <td>Lâm Gia Quân</td>
+                                        <td>15C4B</td>
+                                        <td>C502</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Reset Password</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>102190223</td>
+                                        <td>Lê Minh Lợi</td>
+                                        <td>15C4B</td>
+                                        <td>C502</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Reset Password</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div id="footer" class="footer w3-container w3-white">
+                    <div class="footer-dark">
+                        <footer>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-3 item">
+                                        <h3>Services</h3>
+                                        <ul>
+                                            <li><a href="#">Web design</a></li>
+                                            <li><a href="#">Development</a></li>
+                                            <li><a href="#">Hosting</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3 item">
+                                        <h3>About</h3>
+                                        <ul>
+                                            <li><a href="#">Company</a></li>
+                                            <li><a href="#">Team</a></li>
+                                            <li><a href="#">Careers</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 item text">
+                                        <h3>Company Name</h3>
+                                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                                    </div>
+                                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                                </div>
+                                <p class="copyright">Company Name © 2018</p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="editmodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Chỉnh Sửa</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="formGroupExampleInput">Mô Tả</label>
+                        <div class="autocomplete">
+                            <textarea id="mota" class="form-control" type="text" name="mota" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary">Lưu Thay Đổi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
